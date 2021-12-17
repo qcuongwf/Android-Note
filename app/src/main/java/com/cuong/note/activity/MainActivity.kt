@@ -125,12 +125,12 @@ class MainActivity : AppCompatActivity(), Filterable {
         inflater.inflate(R.menu.menu_sort, popup.menu)
         popup.setOnMenuItemClickListener {
             when(it.itemId){
-                R.id.sortAlphabetically -> DataLocalManager.setSortMode(1)
-                R.id.sortDate -> DataLocalManager.setSortMode(2)
-                R.id.sortColor -> DataLocalManager.setSortMode(3)
+                R.id.sortAlphabetically -> DataLocalManager.sortMode = 1
+                R.id.sortDate -> DataLocalManager.sortMode = 2
+                R.id.sortColor -> DataLocalManager.sortMode = 3
             }
             sortListView()
-            Log.i("Info",DataLocalManager.getSortMode().toString())
+            Log.i("Info",DataLocalManager.sortMode.toString())
             return@setOnMenuItemClickListener true
         }
         popup.show()
@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity(), Filterable {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun sortListView() {
-        when (DataLocalManager.getSortMode()) {
+        when (DataLocalManager.sortMode) {
             //1 -> noteList.sortWith(kotlin.Comparator { o1, o2 -> o1.title.compareTo(o2.title) })
             1 -> noteList.sortWith { o1, o2 -> o1.title.compareTo(o2.title) }
             2 -> noteList.sortByDescending { note -> SimpleDateFormat("dd/MM/yyy hh:mm:ss", Locale.getDefault()).parse(note.date)}
@@ -171,15 +171,15 @@ class MainActivity : AppCompatActivity(), Filterable {
                         when(it.itemId){
                             R.id.viewGrid -> {
                                 val recyclerView = findViewById<RecyclerView>(R.id.notesRecycleView)
-                                DataLocalManager.setListViewMode(0)
-                                Log.i("setViewMote",DataLocalManager.getListViewMode().toString())
+                                DataLocalManager.listViewMode = 0
+                                Log.i("setViewMote",DataLocalManager.listViewMode.toString())
                                 recyclerView.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
                             }
                             R.id.viewList ->{
                                 val recyclerView = findViewById<RecyclerView>(R.id.notesRecycleView)
                                 recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
-                                DataLocalManager.setListViewMode(1)
-                                Log.i("setViewMote",DataLocalManager.getListViewMode().toString())
+                                DataLocalManager.listViewMode = 1
+                                Log.i("setViewMote",DataLocalManager.listViewMode.toString())
                             }
                         }
                         true
@@ -219,7 +219,7 @@ class MainActivity : AppCompatActivity(), Filterable {
         noteList.addAll(list)
         checkEmptyList(recyclerView)
         listNoteAll = noteList
-        when(DataLocalManager.getListViewMode()){
+        when(DataLocalManager.listViewMode){
             0 -> {
                 recyclerView.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
 
