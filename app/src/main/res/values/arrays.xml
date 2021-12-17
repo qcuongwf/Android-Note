@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="preferences_font_size">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+    <string-array name="preferences_font_size_values">
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+    </string-array>
+
+    <string-array name="preferences_item_height">
+        <item>Tiny</item>
+        <item>Normal</item>
+        <item>Huge</item>
+    </string-array>
+    <string-array name="preferences_item_height_values">
+        <item>tiny</item>
+        <item>normal</item>
+        <item>huge</item>
+    </string-array>
+
+    <string-array name="preferences_item_sort">
+        <item>Alphabetically</item>
+        <item>By color</item>
+        <item>By date</item>
+    </string-array>
+    <string-array name="preferences_item_sort_values">
+        <item>alphabetically</item>
+        <item>color</item>
+        <item>date</item>
+    </string-array>
+
+    <string-array name="preferences_item_view">
+        <item>List</item>
+        <item>Grid</item>
+    </string-array>
+    <string-array name="preferences_item_view_values">
+        <item>list</item>
+        <item>grid</item>
+    </string-array>
+</resources>

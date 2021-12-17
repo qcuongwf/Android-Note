@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="General">
+        <SwitchPreference
+            android:title="Dark mode"
+            android:key="darkMode"
+            android:defaultValue="true"/>
+        <ListPreference
+            android:title="Default font size"
+            android:key="fontSize"
+            android:defaultValue="medium"
+            android:entries="@array/preferences_font_size"
+            android:entryValues="@array/preferences_font_size_values"
+            app:useSimpleSummaryProvider="true"
+            />
+        <ListPreference
+            android:title="List item height"
+            android:key="itemHeight"
+            android:defaultValue="normal"
+            android:entries="@array/preferences_item_height"
+            android:entryValues="@array/preferences_item_height_values"
+            app:useSimpleSummaryProvider="true"/>
+    </PreferenceCategory>
+
+
+</androidx.preference.PreferenceScreen>

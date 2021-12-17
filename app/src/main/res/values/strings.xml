@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Note</string>
+    <string name="fksjfljs">fksjfljs</string>
+    <string name="my_notes">My Note</string>
+    <string name="search_note">Search</string>
+    <string name="note_title">Note title</string>
+    <string name="input_text_here">input text here</string>
+    <string name="miscellaneous">Select color</string>
+    <string name="view">View</string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+    <string name="date_and_time">date and time</string>
+    <string name="alphabetically">Alphabetically</string>
+    <string name="sort_by_date">Sort by date</string>
+    <string name="sort_by_color">Sort by color</string>
+    <string name="setting">Setting</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="sort">Sort</string>
+    <string name="empty_list">Note is empty! Please click the icon in bottom right corner to add new note.</string>
+</resources>
